@@ -367,3 +367,27 @@ let fragrance = {
                 </div>`
     }
 
+    let cards6 = document.getElementById("cards6")
+    for (let i = 0; i < fragrance.ahl_E_Oud.items.length; i++) {
+        cards6.innerHTML += `
+                <div class="card" style="width: 18rem;">
+                    <img src="${fragrance.ahl_E_Oud.items[i].imgURL}" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${fragrance.ahl_E_Oud.items[i].name}</h5>
+                        <p class="card-text-seller">${fragrance.ahl_E_Oud.items[i].description}</p>
+                        <div class="rating-cards">
+                            <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
+                            <i class="fa-solid fa-star fa-ms" style="color: #d57760;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
+                            <p class="rating-amount">( ${fragrance.ahl_E_Oud.items[i].rating} )</p>
+                        </div>
+                        <div class="perfume-amount">
+                            <p class="card-text-from">from</p>
+                            <p class="per-price">Rs.${fragrance.ahl_E_Oud.items[i].price}</p>
+                        </div>
+                    </div>
+                </div>`
+    }
+
