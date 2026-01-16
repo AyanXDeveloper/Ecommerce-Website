@@ -45,27 +45,9 @@ p {
     align-items: center;
     justify-content: space-around;
     border-bottom: #3c3c3c 1px solid;
-    /* position: fixed; */
     width: 100%;
     z-index: 999;
 }
-
-/* .navigation-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background-color: #111212;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-bottom: #3c3c3c 1px solid;
-} */
-
-
-
 
 .search-form {
     position: relative;
