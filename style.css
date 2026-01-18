@@ -87,12 +87,15 @@ p {
 
 .nav-button {
     display: flex;
+    gap: 10px;
+    width: 25%;
+    justify-content: center;
+    text-align: start;
 }
 
 .account-but {
     background-color: #00000000;
     border: none;
-    width: 160px;
     display: flex;
     align-items: center;
 }
@@ -200,10 +203,15 @@ p {
 
 .sn-navbar__dropdown-menu a {
     color: #fff;
-    font-size: 13px;
+    font-size: 14px;
     text-decoration: none;
     display: block;
     font-family: inter;
+    transition: color 0.1s ease-in-out; 
+}
+
+.sn-navbar__dropdown-menu a:hover{
+    color: #bdbdbd;
 }
 
 .sn-navbar__dropdown:hover .sn-navbar__dropdown-menu {

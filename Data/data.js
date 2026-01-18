@@ -1,3 +1,5 @@
+
+// Products Object
 export let fragrance = {
     executiveRange: {
         title: "Executive Range",
@@ -246,6 +248,7 @@ export let fragrance = {
     }
 }
 
+// Product Card Template
 export let productCard = (imgURL, name, description, rating, price) => `
 <div class="card" style="width: 18rem;">
     <img width=280 height=300 src="${imgURL}" alt="...">
@@ -266,3 +269,64 @@ export let productCard = (imgURL, name, description, rating, price) => `
                         </div>
                     </div>
                 </div>`
+
+// Card Logic
+export let cardLogic = (rangeName, divId, products) => {
+    rangeName = document.getElementById(divId)
+    products.forEach(item => {
+        rangeName.innerHTML += productCard(
+            item.imgURL,
+            item.name,
+            item.description,
+            item.rating,
+            item.price
+        )
+    });
+}
+
+// Toggle Eye Functionality
+export let eyeToggle = () => {
+    let eyeIcon = document.getElementById("togglePassword")
+
+    let passtoggle = () => {
+        let pass = document.getElementById("password")
+        if (pass) {
+            if (pass.type === "password") {
+                pass.type = "text"
+                eyeIcon.className = "fa-regular fa-eye"
+            } else {
+                pass.type = "password"
+                eyeIcon.className = "fa-regular fa-eye-slash"
+            }
+        }
+    }
+    eyeIcon.addEventListener("click", (event) => {
+        event.preventDefault()
+        passtoggle()
+    })
+}
+
+// Password Generator Functionality
+export let passwordGenerator = () => {
+    let btn = document.getElementsByClassName("passGen")[0]
+    function passGen() {
+        let char = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let numbers = "1234567890"
+        let specialChar = "!@#$%^&*()-_=+][{}|;:<>.,?/"
+        let passLength = 3
+        let pass = ""
+        for (let i = 0; i < passLength; i++) {
+            let ranIndex1 = Math.floor(Math.random() * char.length)
+            let ranIndex2 = Math.floor(Math.random() * numbers.length)
+            let ranIndex3 = Math.floor(Math.random() * specialChar.length)
+            pass += char[ranIndex1] + numbers[ranIndex2] + specialChar[ranIndex3]
+        }
+
+        let password = document.getElementById("password").value = pass
+        console.log(password)
+    }
+    btn.addEventListener("click", (event) => {
+        event.preventDefault()
+        passGen()
+    })
+}

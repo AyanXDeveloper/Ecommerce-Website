@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create an account - Scent & Stories</title>
+    <link rel="shortcut icon" href="../assets/Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Styles/Signup.css">
+</head>
+
+<body>
+    <div class="container"
+        style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 80vh;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <a href="index.html"><img width="300px" style="margin-bottom: 10px;"
+                    src="https://cdn.shopify.com/s/files/1/0264/9243/6565/files/Main_Logo_Black_200x60@2x.png?v=1691871483.webp"
+                    alt=""></a>
+        </div>
+        <div class="form-wrapper">
+            <h2>Create a new account</h2>
+            <p>It’s quick and easy.</p>
+            <form id="form">
+                <div class="form-row">
+                    <input type="text" placeholder="First name" id="firstName">
+                    <input type="text" placeholder="Surname" id="surName">
+                </div>
+
+                <input type="text" placeholder="Mobile number or email address" id="email">
+                <div class="password-container">
+                    <input type="password" placeholder="New password" id="password">
+                    <i class="fa-regular fa-eye-slash" id="togglePassword"></i>
+                </div>
+
+                <button class="passGen">Generate Password</button>
+            </form>
+
+            <p class="info-text">
+                People who use our service may have uploaded your contact information to Scent & Stories. <a
+                    href="#">Learn
+                    more</a>.
+            </p>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </div>
+
+
+    <script type="module" src="../Data/data.js"></script>
+    <script type="module" src="./JS/signUp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
