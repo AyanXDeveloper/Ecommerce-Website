@@ -1,4 +1,4 @@
-import { eyeToggle } from "../../Data/data.js"
+import { eyeToggle, sweetAlert1, sweetAlert2 } from "../../Data/data.js"
 
 // Toggle Eye Functionality
 eyeToggle()
@@ -16,77 +16,75 @@ let login = () => {
     let missing = []
 
     if (email === "" && password === "") {
-        Swal.fire({
-            icon: "error",
-            title: "Fill in both the Fields!!!",
-            text: "Please Fill in all the Fields!",
-            footer: '<a class="forgot-link-2" href="../forms/Signup.html">Register your account</a>'
-        });
+        sweetAlert1("error", "Fill in both the Fields!!!", "Please Fill in all the Fields!")
         return
     }
 
     if (password === "") missing.push("Password")
     if (email === "") missing.push("Email")
     if (missing.length > 0) {
-        Swal.fire({
-            icon: "error",
-            title: "Enter your " + missing.join() + "!!!",
-            text: "Please Enter your: " + missing.join(),
-            footer: '<a class="forgot-link-2" href="../forms/Signup.html">Register your account</a>'
-        });
+        sweetAlert1("error", "Enter your " + missing.join() + "!!!", "Please Enter your: " + missing.join())
         return
     }
 
-    for (let i = 0; i < usersData.length; i++) {
-        // console.log(usersData[i].email)
-        if (email === usersData[i].email && password === usersData[i].pass) {
+    // for (let i = 0; i < usersData.length; i++) {
+    //     console.log(usersData[i].email);
+    //     if (email === usersData[i].email && password === usersData[i].pass) {
+    //         user = true
+    //         sweetAlert2("success", "Successfully Logged In", "You will be redirected shortly")
+
+    //         form.reset()
+
+    //         userNameValue = true
+    //         localStorage.setItem("loggedInUser", JSON.stringify(userNameValue))
+
+    //         setTimeout(function () {
+    //             window.location.href = "../index.html"
+    //         }, 3000)
+    //         return
+    //     }
+
+    //     if (email === usersData[i].email && password !== usersData[i].pass) {
+    //         sweetAlert1("error", "Incorrect Password", "Please Enter correct Password")
+    //         return
+    //     }
+
+    //     if (email !== usersData[i].email && password === usersData[i].pass) {
+    //         sweetAlert1("error", "Incorrect Email", "Please Enter correct Email")
+    //         return
+    //     }
+    // }
+
+    for (let item of usersData) {
+        console.log(item);
+        if (email === item.email && password === item.pass) {
             user = true
-            Swal.fire({
-                icon: "success",
-                title: "Successfully Logged In",
-                text: "You will be redirected shortly"
-            });
-            
+            sweetAlert2("success", "Successfully Logged In", "You will be redirected shortly")
+
             form.reset()
 
-            userNameValue = true
-            localStorage.setItem("loggedInUser", JSON.stringify(userNameValue))
+            // Store the logged-in user's email instead of just true
+            localStorage.setItem("loggedInUser", JSON.stringify(email))
 
             setTimeout(function () {
                 window.location.href = "../index.html"
             }, 3000)
-            break
-        }
-        if (email === usersData[i].email && password !== usersData[i].pass) {
-            user = false
-            Swal.fire({
-                icon: "error",
-                title: "Incorrect Password",
-                text: "Please Enter correct Password",
-                footer: '<a class="forgot-link-2" href="../forms/Signup.html">Register your account</a>'
-            });
-            break
-        }
-        if (email !== usersData[i].email && password === usersData[i].pass) {
-            user = false
-            Swal.fire({
-                icon: "error",
-                title: "Incorrect Email",
-                text: "Please Enter correct Email",
-                footer: '<a class="forgot-link-2" href="../forms/Signup.html">Register your account</a>'
-            });
-            break
+            return
         }
 
+        if (email === item.email && password !== item.pass) {
+            sweetAlert1("error", "Incorrect Password", "Please Enter correct Password")
+            return
+        }
+
+        if (email !== item.email && password === item.pass) {
+            sweetAlert1("error", "Incorrect Email", "Please Enter correct Email")
+            return
+        }
     }
-    
+
     if (!user) {
-        Swal.fire({
-            icon: "error",
-            title: "Invalid Credentials",
-            text: "Please Enter correct Email and Password",
-            footer: '<a class="forgot-link-2" href="../forms/Signup.html">Register your account</a>'
-        });
+        sweetAlert1("error", "Invalid Credentials", "Please Enter correct Email and Password")
     }
 }
 btn.addEventListener("click", (event) => {

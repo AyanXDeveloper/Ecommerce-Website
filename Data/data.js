@@ -330,3 +330,22 @@ export let passwordGenerator = () => {
         passGen()
     })
 }
+
+// Sweet Alert 1
+export const sweetAlert1 = (icon, title, text) => {
+    Swal.fire({
+        icon: icon,
+        title: title,
+        text: text,
+        footer: '<a class="forgot-link-2" href="../forms/Signup.html">Register your account</a>'
+    });
+}
+
+// Sweet Alert 2
+export const sweetAlert2 = (icon, title, text) => {
+        Swal.fire({
+        icon: icon,
+        title: title,
+        text: text,
+    });
+}

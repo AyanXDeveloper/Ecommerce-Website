@@ -1,4 +1,4 @@
-import { eyeToggle, passwordGenerator } from "../../Data/data.js"
+import { eyeToggle, passwordGenerator, sweetAlert1, sweetAlert2 } from "../../Data/data.js"
 
 // Toggle Eye Functionality
 eyeToggle()
@@ -21,11 +21,7 @@ let signUp = () => {
     let userLoggedIn = false;
 
     if (firstName === "" && surName === "") {
-        Swal.fire({
-            icon: "error",
-            title: "Enter Your Full Name!!!",
-            text: "Please Enter Your Full Name!",
-        });
+        sweetAlert2("error", "Enter Your Full Name!!!", "Please Enter Your Full Name!")
         return
     }
 
@@ -33,39 +29,22 @@ let signUp = () => {
     if (surName.trim() === "") missing.push("Sur Name")
 
     if (missing.length > 0) {
-        Swal.fire({
-            icon: "error",
-            title: "Enter Your Full Name Correctly",
-            text: "Please Enter Your " + missing.join(", ")
-        });
+        sweetAlert2("error", "Enter Your Full Name Correctly", "Please Enter Your " + missing.join(", "))
         return;
     }
 
-
     if (email === "") {
-        Swal.fire({
-            icon: "error",
-            title: "Enter Your Email!!!",
-            text: "Please Enter Your Email!",
-        });
+        sweetAlert2("error", "Enter Your Email!!!", "Please Enter Your Email!")
         return
     }
 
     if (!emailRegEx.test(email)) {
-        Swal.fire({
-            icon: "error",
-            title: "Enter Correct Email!!!",
-            text: "Please Enter Your Email Correctly!",
-        });
+        sweetAlert2("error", "Enter Correct Email!!!", "Please Enter Your Email Correctly!")
         return
     }
 
     if (password === "") {
-        Swal.fire({
-            icon: "error",
-            title: "Enter Your Password!!!",
-            text: "Please Enter Your Password!",
-        });
+        sweetAlert2("error", "Enter Your Password!!!", "Please Enter Your Password!")
         return
     }
 
@@ -100,11 +79,7 @@ let signUp = () => {
     }
 
     if (user) {
-        Swal.fire({
-            icon: "success",
-            title: "Succesfully Registered In!!!",
-            text: "Congrats!!! You Have Succesfully Registered",
-        });
+        sweetAlert2("success", "Succesfully Registered In!!!", "Congrats!!! You Have Succesfully Registered")
 
         let data = {
             fName: firstName,
@@ -113,8 +88,8 @@ let signUp = () => {
             pass: password,
         }
 
-        userLoggedIn = true;
-        localStorage.setItem("loggedInUser", JSON.stringify(userLoggedIn));
+        // Store the email of the newly signed-up user
+        localStorage.setItem("loggedInUser", JSON.stringify(email));
 
         console.log(data)
 
