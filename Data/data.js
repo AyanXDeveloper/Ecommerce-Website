@@ -127,7 +127,7 @@ export let fragrance = {
         title: "Summer Deals",
         items: [
             {
-                imgURL: "./assets/Untitled design (27).png",
+                imgURL: "../assets/Untitled design (27).png",
                 name: "Floral Body Mist",
                 description: "Women’s Favorite Floral Mist",
                 rating: 21,
@@ -251,7 +251,7 @@ export let fragrance = {
 // Product Card Template
 export let productCard = (imgURL, name, description, rating, price) => `
 <div class="card" style="width: 18rem;">
-    <img width=280 height=300 src="${imgURL}" alt="...">
+    <img class="product-card-img" width=285 height=300 src="${imgURL}" alt="..." loading = "lazy">
         <div class="card-body">
             <h5 class="card-title">${name}</h5>
                 <p class="card-text-seller">${description}</p>
