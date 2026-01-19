@@ -5,7 +5,7 @@ export let fragrance = {
         title: "Executive Range",
         items: [
             {
-                imgURL: "../assets/Perfume-1.webp",
+                imgURL: "./assets/Perfume-1.webp",
                 name: "Catch 22",
                 description: "Our #1 Best Seller 🏆",
                 rating: 495,
