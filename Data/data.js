@@ -252,23 +252,23 @@ export let fragrance = {
 export let productCard = (imgURL, name, description, rating, price) => `
 <div class="card" style="width: 18rem;">
     <img class="product-card-img" width=285 height=300 src="${imgURL}" alt="..." loading = "lazy">
-        <div class="card-body">
-            <h5 class="card-title">${name}</h5>
-                <p class="card-text-seller">${description}</p>
-                        <div class="rating-cards">
-                            <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
-                            <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
-                            <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
-                            <i class="fa-solid fa-star fa-ms" style="color: #d57760;"></i>
-                            <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
-                            <p class="rating-amount">( ${rating} )</p>
-                        </div>
-                        <div class="perfume-amount">
-                            <p class="card-text-from">from</p>
-                            <p class="per-price">Rs.${price}</p>
-                        </div>
-                    </div>
-                </div>`
+    <div class="card-body">
+        <h5 class="card-title">${name}</h5>
+        <p class="card-text-seller">${description}</p>
+                <div class="rating-cards">
+                    <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
+                    <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
+                    <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
+                    <i class="fa-solid fa-star fa-ms" style="color: #d57760;"></i>
+                    <i class="fa-solid fa-star fa-sm" style="color: #d57760;"></i>
+                    <p class="rating-amount">( ${rating} )</p>
+                </div>
+                <div class="perfume-amount">
+                    <p class="card-text-from">from</p>
+                    <p class="per-price">Rs.${price}</p>
+                </div>
+        </div>
+</div>`
 
 // Card Logic
 export let cardLogic = (rangeName, divId, products) => {
