@@ -64,7 +64,7 @@ let login = () => {
             form.reset()
 
             // Store the logged-in user's email instead of just true
-            localStorage.setItem("loggedInUser", JSON.stringify(email))
+            localStorage.setItem("loggedInUser", JSON.stringify([user, email]))
 
             setTimeout(function () {
                 window.location.href = "../index.html"

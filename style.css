@@ -755,3 +755,19 @@ video {
 .product-card-img{
     border-radius: 12px 12px 0 0;
 }
+
+.add-to-cart-btn button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 30px 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.add-to-cart-btn button:hover{
+    transform: scale(1.05);
+}

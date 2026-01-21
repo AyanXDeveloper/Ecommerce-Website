@@ -1,4 +1,4 @@
-import { eyeToggle, passwordGenerator, sweetAlert1, sweetAlert2 } from "../../Data/data.js"
+import { eyeToggle, passwordGenerator, sweetAlert1, sweetAlert2, sweetAlert3 } from "../../Data/data.js"
 
 // Toggle Eye Functionality
 eyeToggle()
@@ -68,12 +68,7 @@ let signUp = () => {
     for (let i = 0; i < usersData.length; i++) {
         if (email === usersData[i].email) {
             user = false
-            Swal.fire({
-                icon: "error",
-                title: "User Already Registered",
-                text: "Log In",
-                footer: '<a class="forgot-link-2" href="../forms/login.html">Log In</a>'
-            });
+            sweetAlert3("error", "User Already Registered", "Log In")
             break
         }
     }
@@ -89,7 +84,7 @@ let signUp = () => {
         }
 
         // Store the email of the newly signed-up user
-        localStorage.setItem("loggedInUser", JSON.stringify(email));
+        localStorage.setItem("loggedInUser", JSON.stringify([user, email])); 
 
         console.log(data)
 

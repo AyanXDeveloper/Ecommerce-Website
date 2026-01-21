@@ -267,6 +267,11 @@ export let productCard = (imgURL, name, description, rating, price) => `
                     <p class="card-text-from">from</p>
                     <p class="per-price">Rs.${price}</p>
                 </div>
+                <div class="add-to-cart-btn">
+                    <button class="cartBtn">
+                        Add To Cart
+                    </button>
+                </div>
         </div>
 </div>`
 
@@ -343,9 +348,19 @@ export const sweetAlert1 = (icon, title, text) => {
 
 // Sweet Alert 2
 export const sweetAlert2 = (icon, title, text) => {
-        Swal.fire({
+    Swal.fire({
         icon: icon,
         title: title,
         text: text,
+    });
+}
+
+// Sweet Alert 3
+export const sweetAlert3 = (icon, title, text) => {
+    Swal.fire({
+        icon: icon,
+        title: title,
+        text: text,
+        footer: '<a class="forgot-link-2" href="../forms/login.html">Log In</a>'
     });
 }

@@ -1,9 +1,10 @@
+import { sweetAlert3 } from "./Data/data.js";
 
 // Account Name Functionality
-let accountName = () => {
+const accountName = () => {
     let accountP = document.getElementsByClassName("account-p")[1];
     let dropDownDiv = document.getElementsByClassName("sn-navbar__dropdown-menu")[0];
-    let loggedInUserEmail = JSON.parse(localStorage.getItem("loggedInUser"));
+    let loggedInUserEmail = JSON.parse(localStorage.getItem("loggedInUser"))[1];
     let usersData = JSON.parse(localStorage.getItem("Data")) || [];
 
     let firstChar = (sUName) => {
@@ -27,3 +28,18 @@ let accountName = () => {
     }
 }
 accountName();
+
+// Add To Cart Functionality
+const addToCart = (cartBtn) => {
+    let userValue = JSON.parse(localStorage.getItem("loggedInUser"))[0]
+
+    if(userValue === undefined) {
+        sweetAlert3("error", "Login Required!!!", "Please Log In First to Add Products in the Cart")
+    } 
+}
+
+document.addEventListener("click", (event) => {
+    if(event.target.classList.contains("cartBtn")){
+        addToCart(event.target)
+    }
+})
