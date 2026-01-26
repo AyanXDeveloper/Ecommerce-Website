@@ -56,7 +56,7 @@ let login = () => {
     // }
 
     for (let item of usersData) {
-        console.log(item);
+        // console.log(item);
         if (email === item.email && password === item.pass) {
             user = true
             sweetAlert2("success", "Successfully Logged In", "You will be redirected shortly")
@@ -64,7 +64,8 @@ let login = () => {
             form.reset()
 
             // Store the logged-in user's email instead of just true
-            localStorage.setItem("loggedInUser", JSON.stringify([user, email]))
+            localStorage.setItem("loggedInUser", JSON.stringify(email))
+            localStorage.setItem("User", JSON.stringify(user))
 
             setTimeout(function () {
                 window.location.href = "../index.html"

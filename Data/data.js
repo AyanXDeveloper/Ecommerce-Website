@@ -10,6 +10,7 @@ export let fragrance = {
                 description: "Our #1 Best Seller 🏆",
                 rating: 495,
                 price: "1,990",
+                id: 1
             },
             {
                 imgURL: "./assets/perfume-2.webp",
@@ -17,6 +18,7 @@ export let fragrance = {
                 description: "#1 Women's Best-Seller 🏆",
                 rating: 132,
                 price: "1,890",
+                id: 2
             },
             {
                 imgURL: "./assets/perfume-3.webp",
@@ -24,6 +26,7 @@ export let fragrance = {
                 description: "Our #1 Office Wear! 👔",
                 rating: 158,
                 price: "2.390",
+                id: 3
             },
             {
                 imgURL: "./assets/perfume-4.webp",
@@ -31,6 +34,7 @@ export let fragrance = {
                 description: "Our Top Rated Perfume ⭐",
                 rating: 207,
                 price: "2,790",
+                id: 4
             },
             {
                 imgURL: "./assets/perfume-5.webp",
@@ -38,6 +42,7 @@ export let fragrance = {
                 description: "Our Signature Scents",
                 rating: 11,
                 price: "1,990",
+                id: 5
             },
         ]
     },
@@ -50,6 +55,7 @@ export let fragrance = {
                 description: "Best Selling Green Perfume",
                 rating: 65,
                 price: "1,430",
+                id: 6
             },
             {
                 imgURL: "./assets/perfume-7.webp",
@@ -57,6 +63,7 @@ export let fragrance = {
                 description: "The Most Noticeable Scent!",
                 rating: 73,
                 price: "1,750",
+                id: 7
             },
             {
                 imgURL: "./assets/Untitled design (23).png",
@@ -64,6 +71,7 @@ export let fragrance = {
                 description: "Outstanding Sporty Fragrance",
                 rating: 19,
                 price: "1.230",
+                id: 8
             },
             {
                 imgURL: "./assets/perfume-9.webp",
@@ -71,6 +79,7 @@ export let fragrance = {
                 description: "Second Best Floral Fragrance 🏆",
                 rating: 31,
                 price: "1,690",
+                id: 9
             },
             {
                 imgURL: "./assets/perfume-10.webp",
@@ -78,6 +87,7 @@ export let fragrance = {
                 description: "Finest Classical - Modern Combo",
                 rating: 72,
                 price: "1,390",
+                id: 10
             },
         ]
 
@@ -91,6 +101,7 @@ export let fragrance = {
                 description: "The Poet's Fragrance",
                 rating: 17,
                 price: "1,590",
+                id: 11
             },
             {
                 imgURL: "./assets/perfume-12.webp",
@@ -98,6 +109,7 @@ export let fragrance = {
                 description: "The Premium Gold Fragrance",
                 rating: 32,
                 price: "1,690",
+                id: 12
             },
             {
                 imgURL: "./assets/perfume-13.webp",
@@ -105,6 +117,7 @@ export let fragrance = {
                 description: "Top Woody Spicy Fragrance",
                 rating: 11,
                 price: "1.490",
+                id: 13
             },
             {
                 imgURL: "./assets/Untitled design (25).png",
@@ -112,6 +125,7 @@ export let fragrance = {
                 description: "Smoky Vanilla Pleasure",
                 rating: 18,
                 price: "3,990",
+                id: 14
             },
             {
                 imgURL: "./assets/Untitled design (26).png",
@@ -119,6 +133,7 @@ export let fragrance = {
                 description: "Perfumes that fit anywhere",
                 rating: 87,
                 price: "4,290",
+                id: 15
             },
         ]
 
@@ -132,6 +147,7 @@ export let fragrance = {
                 description: "Women’s Favorite Floral Mist",
                 rating: 21,
                 price: "680",
+                id: 16
             },
             {
                 imgURL: "./assets/perfume-17.webp",
@@ -139,6 +155,7 @@ export let fragrance = {
                 description: "2nd Best Selling Perfume",
                 rating: 12,
                 price: "2,600",
+                id: 17
             },
             {
                 imgURL: "./assets/perfume-19.webp",
@@ -146,6 +163,7 @@ export let fragrance = {
                 description: "Timeless Woody Scent",
                 rating: 9,
                 price: "1.520",
+                id: 18
             },
             {
                 imgURL: "./assets/Untitled design (28).png",
@@ -153,6 +171,7 @@ export let fragrance = {
                 description: "Most Luxurious Flowery Aroma",
                 rating: 14,
                 price: "770",
+                id: 19
             },
             {
                 imgURL: "./assets/SandCity1x1.webp",
@@ -160,6 +179,7 @@ export let fragrance = {
                 description: "Legendary Men's Perfume",
                 rating: 29,
                 price: "1,270",
+                id: 20
             },
         ]
 
@@ -173,6 +193,7 @@ export let fragrance = {
                 description: "Our Best Oud Fragrance",
                 rating: 83,
                 price: "1,390",
+                id: 21
             },
             {
                 imgURL: "./assets/oud-2.webp",
@@ -180,6 +201,7 @@ export let fragrance = {
                 description: "Most Popular Rose Oud",
                 rating: 7,
                 price: "2,750",
+                id: 22
             },
             {
                 imgURL: "./assets/oud-3.webp",
@@ -187,6 +209,7 @@ export let fragrance = {
                 description: "Classic Oud Rose Combo",
                 rating: 19,
                 price: "2.190",
+                id: 23
             },
             {
                 imgURL: "./assets/oud-4.webp",
@@ -194,6 +217,7 @@ export let fragrance = {
                 description: "Best Selling Oriental Perfume",
                 rating: 18,
                 price: "3.190",
+                id: 24
             },
             {
                 imgURL: "./assets/oud-5.webp",
@@ -201,6 +225,7 @@ export let fragrance = {
                 description: "The Elite Scent!",
                 rating: 11,
                 price: "2,480",
+                id: 25
             },
         ]
 
@@ -214,6 +239,7 @@ export let fragrance = {
                 description: "Our #1 Best Seller 🏆",
                 rating: 9,
                 price: "750",
+                id: 26
             },
             {
                 imgURL: "./assets/Untitled design (30).png",
@@ -221,6 +247,7 @@ export let fragrance = {
                 description: "#1 Women's Best-Seller 🏆",
                 rating: 1,
                 price: "850",
+                id: 27
             },
             {
                 imgURL: "./assets/Untitled design (31).png",
@@ -228,6 +255,7 @@ export let fragrance = {
                 description: "Our Top Rated Fragrance ⭐",
                 rating: 2,
                 price: "1.090",
+                id: 28
             },
             {
                 imgURL: "./assets/Untitled design (32).png",
@@ -235,6 +263,7 @@ export let fragrance = {
                 description: "2nd Most Popular Rose & Oud Combo",
                 rating: 2,
                 price: "990",
+                id: 29
             },
             {
                 imgURL: "./assets/Untitled design (33).png",
@@ -242,6 +271,7 @@ export let fragrance = {
                 description: "Our #1 Office Wear! 👔",
                 rating: 5,
                 price: "980",
+                id: 30
             },
         ]
 
@@ -249,7 +279,7 @@ export let fragrance = {
 }
 
 // Product Card Template
-export let productCard = (imgURL, name, description, rating, price) => `
+export let productCard = (imgURL, name, description, rating, price, id) => `
 <div class="card" style="width: 18rem;">
     <img class="product-card-img" width=285 height=300 src="${imgURL}" alt="..." loading = "lazy">
     <div class="card-body">
@@ -268,7 +298,7 @@ export let productCard = (imgURL, name, description, rating, price) => `
                     <p class="per-price">Rs.${price}</p>
                 </div>
                 <div class="add-to-cart-btn">
-                    <button class="cartBtn">
+                    <button class="cartBtn" data-product-id="${id}">
                         Add To Cart
                     </button>
                 </div>
@@ -279,13 +309,7 @@ export let productCard = (imgURL, name, description, rating, price) => `
 export let cardLogic = (rangeName, divId, products) => {
     rangeName = document.getElementById(divId)
     products.forEach(item => {
-        rangeName.innerHTML += productCard(
-            item.imgURL,
-            item.name,
-            item.description,
-            item.rating,
-            item.price
-        )
+        rangeName.innerHTML += productCard(item.imgURL, item.name, item.description, item.rating, item.price, item.id)
     });
 }
 

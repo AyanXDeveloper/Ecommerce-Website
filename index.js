@@ -4,7 +4,7 @@ import { sweetAlert3 } from "./Data/data.js";
 const accountName = () => {
     let accountP = document.getElementsByClassName("account-p")[1];
     let dropDownDiv = document.getElementsByClassName("sn-navbar__dropdown-menu")[0];
-    let loggedInUserEmail = JSON.parse(localStorage.getItem("loggedInUser"))[1];
+    let loggedInUserEmail = JSON.parse(localStorage.getItem("loggedInUser"));
     let usersData = JSON.parse(localStorage.getItem("Data")) || [];
 
     let firstChar = (sUName) => {
@@ -24,6 +24,7 @@ const accountName = () => {
         let logOut = document.getElementById("logOut")
         logOut.addEventListener("click", () => {
             localStorage.setItem("loggedInUser", JSON.stringify(false))
+            localStorage.setItem("User", JSON.stringify(false))
         })
     }
 }
@@ -31,15 +32,25 @@ accountName();
 
 // Add To Cart Functionality
 const addToCart = (cartBtn) => {
-    let userValue = JSON.parse(localStorage.getItem("loggedInUser"))[0]
+    const cartArray = JSON.parse(localStorage.getItem("Cart")) || []
+    let userValue = JSON.parse(localStorage.getItem("User"))
+    let cartNum = document.getElementsByClassName("cart-number")[0]
+    cartNum.style.display = "block"                                                 
 
-    if(userValue === undefined) {
+    if (!userValue) {
         sweetAlert3("error", "Login Required!!!", "Please Log In First to Add Products in the Cart")
-    } 
+        return
+    }
+
+    let productId = cartBtn.dataset.productId
+    console.log(productId)
+
+
+
 }
 
 document.addEventListener("click", (event) => {
-    if(event.target.classList.contains("cartBtn")){
+    if (event.target.classList.contains("cartBtn")) {
         addToCart(event.target)
     }
 })

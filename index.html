@@ -18,76 +18,89 @@
 </head>
 
 <body>
+    <div class="top-bar-above display-flex">
+        <marquee loop="infinite" behavior="scroll" direction="left">
+            <p class="top-bar-p">15 Days Hassle-Free Return
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enjoy Free Shipping on Orders
+                Above
+                3000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GET 30% by Using Promo Code
+                PERFUMES30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buy One Get One Free
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Limited Time Offer Only</p>
+        </marquee>
+    </div>
     <header>
-        <nav class="navbar-header-up">
-            <div class="top-bar-above display-flex">
-                <marquee loop="infinite" behavior="scroll" direction="left">
-                    <p class="top-bar-p">15 Days Hassle-Free Return
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enjoy Free Shipping on Orders
-                        Above
-                        3000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GET 30% by Using Promo Code
-                        PERFUMES30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buy One Get One Free
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Limited Time Offer Only</p>
-                </marquee>
+        <div class="navigation-bar display-flex">
+            <form class="search-form" action="" method="get">
+                <input placeholder="Search" class="search-input" type="text" />
+                <button type="submit" class="search-button">
+                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                </button>
+            </form>
+            <div class="logo">
+                <a href="index.html"><img width="240px" src="./assets/Logo (2).avif" alt=""></a>
             </div>
-            <div class="navigation-bar display-flex">
-                <form class="search-form" action="" method="get">
-                    <input placeholder="Search" class="search-input" type="text" />
-                    <button type="submit" class="search-button">
-                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                    </button>
-                </form>
-                <div class="logo">
-                    <a href="index.html"><img width="240px" src="./assets/Logo (2).avif" alt=""></a>
-                </div>
-                <div class="nav-button">
-                    <button class="account-but">
-                        <i class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i>
-                        <li class="sn-navbar__item sn-navbar__dropdown">
-                            <a href="#" class="sn-navbar__link account-p"><span class="account-p">Account</span>
-                                <i class="fa-solid fa-chevron-down"></i></a>
-                            <ul class="sn-navbar__dropdown-menu" style="text-align: left;">
-                                <li><a class="dropdown-a" href="./forms/login.html">Login</a></li>
-                                <li><a class="dropdown-a" href="./forms/Signup.html">Sign Up</a></li>
-                            </ul>
-                        </li>
-                    </button>
-                    <button class="account-but">
-                        <i class="fa-solid fa-bag-shopping fa-lg" style="color: #ffffff;"></i>
-                        <p class="account-p">Cart</p>
-                    </button>
-                </div>
-            </div>
-            <nav class="sn-navbar">
-                <ul class="sn-navbar__menu">
+            <div class="nav-button">
+                <button class="account-but">
+                    <i class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i>
                     <li class="sn-navbar__item sn-navbar__dropdown">
-                        <a href="./collections/all.html" class="sn-navbar__link">SHOP <i
-                                class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="sn-navbar__dropdown-menu">
-                            <li><a href="./collections/perfume.html">Perfume</a></li>
-                            <li><a href="./collections/body-spray.html">Body Spray</a></li>
-                            <li><a href="./collections/gift-set.html">Gift Set</a></li>
+                        <a href="#" class="sn-navbar__link account-p"><span class="account-p">Account</span>
+                            <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="sn-navbar__dropdown-menu" style="text-align: left;">
+                            <li><a class="dropdown-a" href="./forms/login.html">Login</a></li>
+                            <li><a class="dropdown-a" href="./forms/Signup.html">Sign Up</a></li>
                         </ul>
                     </li>
-                    <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">SUMMER DEALS</a></li>
-                    <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">GIFTING</a></li>
-                    <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">LESS THAN 1500</a>
-                    </li>
-                    <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">OUD</a></li>
-                    <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">BLOGS</a></li>
-                    <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">CORPORATE ORDER</a>
-                    </li>
-                    <li class="sn-navbar__item sn-navbar__dropdown">
-                        <a href="#" class="sn-navbar__link">CONTACT <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="sn-navbar__dropdown-menu">
-                            <li><a href="#">Customer Support</a></li>
-                            <li><a href="#">Wholesale</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </nav>
+                </button>
+                <button type="button" class="account-but" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <div class="cart-div" style="position: relative;">
+                        <i class="fa-solid fa-bag-shopping fa-xl" style="color: #ffffff; position: relative;"></i>
+                        <p class="cart-number">0</p>
+                    </div>
+                    <p class="account-p">Cart</p>
+                </button>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Try scrolling the rest of the page to see this option in action.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sn-navbar">
+            <ul class="sn-navbar__menu">
+                <li class="sn-navbar__item sn-navbar__dropdown">
+                    <a href="./collections/all.html" class="sn-navbar__link">SHOP <i
+                            class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="sn-navbar__dropdown-menu">
+                        <li><a href="./collections/perfume.html">Perfume</a></li>
+                        <li><a href="./collections/body-spray.html">Body Spray</a></li>
+                        <li><a href="./collections/gift-set.html">Gift Set</a></li>
+                    </ul>
+                </li>
+                <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">SUMMER DEALS</a></li>
+                <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">GIFTING</a></li>
+                <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">LESS THAN 1500</a>
+                </li>
+                <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">OUD</a></li>
+                <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">BLOGS</a></li>
+                <li class="sn-navbar__item"><a href="#" class="sn-navbar__link">CORPORATE ORDER</a>
+                </li>
+                <li class="sn-navbar__item sn-navbar__dropdown">
+                    <a href="#" class="sn-navbar__link">CONTACT <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="sn-navbar__dropdown-menu">
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </header>
+
 
     <main>
         <div class="main-website">
@@ -98,7 +111,7 @@
                                 alt="Collections"></a>
                     </div>
                     <div class="carousel-item">
-                        <a href="./collections/perfume.html"><img src="./assets/Faiz_Web_banner.webp"
+                        <a href="./collections/perfume.html"><img src="./assets/D_OudFest_26_Banner.webp"
                                 class="d-block w-100" alt="Collections"></a>
                     </div>
                 </div>

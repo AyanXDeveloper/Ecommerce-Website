@@ -84,7 +84,8 @@ let signUp = () => {
         }
 
         // Store the email of the newly signed-up user
-        localStorage.setItem("loggedInUser", JSON.stringify([user, email])); 
+        localStorage.setItem("loggedInUser", JSON.stringify(email)); 
+        localStorage.setItem("User", JSON.stringify(user)); 
 
         console.log(data)
 
