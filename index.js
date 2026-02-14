@@ -1,4 +1,8 @@
 import { sweetAlert3 } from "./Data/data.js";
+import { cardLogic } from "./range.js";
+import { currentUser, signOutUser } from "./firebase.js";
+
+currentUser()
 
 // Account Name Functionality
 const accountName = () => {
@@ -10,9 +14,8 @@ const accountName = () => {
     let firstChar = (sUName) => {
         return sUName.charAt(0).toUpperCase();
     }
-
+ 
     if (loggedInUserEmail && typeof loggedInUserEmail === 'string') {
-        // Find the user object that matches the logged-in email
         let loggedInUser = usersData.find(user => user.email === loggedInUserEmail);
 
         if (loggedInUser) {
@@ -23,6 +26,7 @@ const accountName = () => {
 
         let logOut = document.getElementById("logOut")
         logOut.addEventListener("click", () => {
+            signOutUser()
             localStorage.setItem("loggedInUser", JSON.stringify(false))
             localStorage.setItem("User", JSON.stringify(false))
         })
@@ -43,10 +47,7 @@ const addToCart = (cartBtn) => {
     }
 
     let productId = cartBtn.dataset.productId
-    console.log(productId)
-
-
-
+    // console.log(productId)
 }
 
 document.addEventListener("click", (event) => {

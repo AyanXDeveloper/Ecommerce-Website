@@ -304,7 +304,7 @@ export let productCard = (imgURL, name, description, rating, price, id) => `
                 </div>
         </div>
 </div>`
-
+ 
 // Card Logic
 export let cardLogic = (rangeName, divId, products) => {
     rangeName = document.getElementById(divId)

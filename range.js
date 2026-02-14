@@ -17,4 +17,5 @@ cardLogic("oud", "oud", fragrance.oud.items);
 
 // Ahl E Oud Cards
 cardLogic("ahl_E_Oud", "ahl_E_Oud", fragrance.ahl_E_Oud.items);
-
+ 
+export {cardLogic};

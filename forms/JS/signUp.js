@@ -1,4 +1,5 @@
 import { eyeToggle, passwordGenerator, sweetAlert1, sweetAlert2, sweetAlert3 } from "../../Data/data.js"
+import { signUpAuth } from "../../firebase.js"
 
 // Toggle Eye Functionality
 eyeToggle()
@@ -61,7 +62,6 @@ let signUp = () => {
         return
     }
 
-
     let user = true;
     let usersData = JSON.parse(localStorage.getItem("Data")) || []
 
@@ -76,6 +76,8 @@ let signUp = () => {
     if (user) {
         sweetAlert2("success", "Succesfully Registered In!!!", "Congrats!!! You Have Succesfully Registered")
 
+        signUpAuth(firstName, surName, email, password)
+
         let data = {
             fName: firstName,
             sName: surName,
@@ -83,9 +85,8 @@ let signUp = () => {
             pass: password,
         }
 
-        // Store the email of the newly signed-up user
-        localStorage.setItem("loggedInUser", JSON.stringify(email)); 
-        localStorage.setItem("User", JSON.stringify(user)); 
+        localStorage.setItem("loggedInUser", JSON.stringify(email));
+        localStorage.setItem("User", JSON.stringify(user));
 
         console.log(data)
 
@@ -95,9 +96,11 @@ let signUp = () => {
 
         form.reset()
 
+
         setTimeout(function () {
             window.location.href = "../index.html"
-        }, 3000)
+        },5000)
     }
+
 }
 btn.addEventListener("click", signUp)

@@ -1,4 +1,5 @@
 import { eyeToggle, sweetAlert1, sweetAlert2 } from "../../Data/data.js"
+import { signInAuth } from "../../firebase.js"
 
 // Toggle Eye Functionality
 eyeToggle()
@@ -27,43 +28,15 @@ let login = () => {
         return
     }
 
-    // for (let i = 0; i < usersData.length; i++) {
-    //     console.log(usersData[i].email);
-    //     if (email === usersData[i].email && password === usersData[i].pass) {
-    //         user = true
-    //         sweetAlert2("success", "Successfully Logged In", "You will be redirected shortly")
-
-    //         form.reset()
-
-    //         userNameValue = true
-    //         localStorage.setItem("loggedInUser", JSON.stringify(userNameValue))
-
-    //         setTimeout(function () {
-    //             window.location.href = "../index.html"
-    //         }, 3000)
-    //         return
-    //     }
-
-    //     if (email === usersData[i].email && password !== usersData[i].pass) {
-    //         sweetAlert1("error", "Incorrect Password", "Please Enter correct Password")
-    //         return
-    //     }
-
-    //     if (email !== usersData[i].email && password === usersData[i].pass) {
-    //         sweetAlert1("error", "Incorrect Email", "Please Enter correct Email")
-    //         return
-    //     }
-    // }
-
     for (let item of usersData) {
-        // console.log(item);
         if (email === item.email && password === item.pass) {
             user = true
             sweetAlert2("success", "Successfully Logged In", "You will be redirected shortly")
 
+            signInAuth(email, password)
+ 
             form.reset()
 
-            // Store the logged-in user's email instead of just true
             localStorage.setItem("loggedInUser", JSON.stringify(email))
             localStorage.setItem("User", JSON.stringify(user))
 
@@ -72,14 +45,9 @@ let login = () => {
             }, 3000)
             return
         }
-
-        if (email === item.email && password !== item.pass) {
-            sweetAlert1("error", "Incorrect Password", "Please Enter correct Password")
-            return
-        }
-
-        if (email !== item.email && password === item.pass) {
-            sweetAlert1("error", "Incorrect Email", "Please Enter correct Email")
+ 
+        if (email === item.email && password !== item.pass || email !== item.email && password === item.pass) {
+            sweetAlert1("error", "Incorrect Credentials", "Please Enter correct Email or Password")
             return
         }
     }
